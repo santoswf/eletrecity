@@ -13,6 +13,7 @@ body {
 header {
   display: flex;
   align-items: center;
+  position: absolute;
   z-index: 999;
 
   padding: 10px;
@@ -36,7 +37,7 @@ nav ul li a {
   font-size: 22px;
   font-weight: 200;
   text-decoration: none;
-  color: rgb(14, 14, 14);
+  color: rgb(249, 249, 249);
 }
 
 /*Configurações do Carrossel*/
@@ -151,5 +152,155 @@ nav ul li a {
 .trabalho{
   text-align: center;
   font-size: 3em;
+  color: rgb(126, 2, 2);
 }
 
+
+.sTwo {
+  position: relative;
+  top: 16px;
+  text-align: center;
+  font-size: 1.2em;
+  color: rgb(126, 2, 2);
+}
+
+.carousel-caption h5 {
+  position: relative;
+  right: 70px;
+  bottom: 50px;
+  text-align: left;
+  font-size: 50px;
+}
+
+.carousel-caption p {
+  text-align: left;
+
+  position: relative;
+  right: 66px;
+  bottom: 60px;
+}
+
+.configHeight {
+  display: flex;
+  align-items: center;
+  height: 750px;
+}
+
+.txtMiddle h5 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 40px;
+  
+  text-align: justify;
+  position: relative;
+  left: 750px;
+  bottom: 280px;
+}
+
+.txtMiddle p {
+  text-align: justify;
+  line-height: 20px;
+  font-weight: 600;
+
+  position: relative;
+  left: 753px;
+  bottom: 270px;
+}
+
+.flexContainerMiddle {
+  display: flex;
+  align-items: center;  
+  height: 750px;
+}
+
+.txtDown h5 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 45px;
+
+  position: relative;
+  right: 50px;
+  bottom: 270px;
+}
+
+.txtDown p {
+  font-weight: 600;
+
+  position: relative;
+  bottom: 270px;
+  right: 50px;
+}
+
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin: 12px;
+  width: 28rem; 
+  height: 450px;
+  transition: 1.6s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 20px 40px rgb(2, 2, 2);
+}
+
+.card-body h5,p {
+  text-align: center;
+} 
+
+.card-body p {
+  margin-top: 20px;
+}
+
+.card-body h5 {
+  font-size: 24px;
+  color: rgb(126, 2, 2);
+}
+
+.iconCard {
+  text-align: center;
+}
+
+.iconCard img {
+  width: 340px;
+  height: 210px;
+
+  object-fit: cover;
+}
+
+.cardSaibaMais {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 25px;
+}
+
+.saibaMais {
+  font-size: 22px;
+  text-decoration: none;   
+  color: rgb(126, 2, 2);
+}
+
+.cardSaibaMais i {
+  font-size: 22px;
+  margin-left: 8px;
+}
+
+.sobre {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.txtSobre p{
+  text-align: justify;
+  width: 420px;
+}
+
+.txtSobre h1 {
+  color: rgb(126, 2, 2);
+}
