@@ -13,17 +13,25 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
   z-index: 999;
-  /* background: var(--titulo); */
+  position: fixed;
+  transition: background 0.3s ease, color 0.3s ease;
 
-  padding: 10px;
+  padding: 20px;
+  width: 100%;
+  /* margin-top: 18px; */
+}
+
+#header.scrolled {
+  background: #0a2743f8;
+  color: #fff;
 }
 
 .logo {
@@ -37,17 +45,43 @@ nav ul {
 
 nav ul li {
   list-style-type: none;
+  padding: 10px;
+  transition: 2s ease;
 }
 
-nav ul li a {
+nav a {
   padding: 10px;
   font-size: 22px;
   font-weight: 200;
   text-decoration: none;
+  color: rgba(255, 255, 255, 0.253);
+  position: relative;
+}
+
+nav a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background: #F99324;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
   color: white;
 }
 
-/* Carousel settings */
+nav li:hover {
+  transform: scale(1.2);
+}
+/* START CAROUSEL */
 
 .container {
   display: flex;
@@ -66,28 +100,18 @@ nav ul li a {
   margin-right: 50px;
   text-align: left;
   font-size: 50px;
+  bottom: 25rem;
 }
 
 .carousel-caption p {
   position: relative;
   right: 30px;
   text-align: left;
-  margin-bottom: 560px;
+  bottom: 25rem;
 }
-/* 
-.configHeight {
-  display: flex;
-  align-items: center;
-  height: 750px;
-}
+/* END CAROUSEL  */
 
-.flexContainerMiddle {
-  display: flex;
-  align-items: center;  
-  height: 750px;
-} */
-
-/*Configurações cards*/
+/* START CARDS */
 
 .box-cards-container {
   height: auto;
@@ -112,7 +136,6 @@ nav ul li a {
 }
 
 .especialidades {
-  /* background-image: url(img/fundo-tec.png); */
   height: auto;
 }
 
@@ -163,31 +186,54 @@ nav ul li a {
   object-fit: cover;
 }
 
-/*Configurações projetos*/
+.container-cards {
+  display: flex;
+  justify-content: center;
+}
 
-.projeto {
-  background-image: url(img/eletrecista-fundo.png);
-  background-repeat: no-repeat;
-  background-position: left center;
+.left:hover {
+  transform: rotate(-5deg) translateY(-10px);
+  background-color: #F99324;
+  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
+}
+
+.right:hover {
+  transform: rotate(5deg) translateY(-10px);
+  background-color: #F99324;
+  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
+}
+/* END CARDS */
+
+/* START PROJECTS*/
+
+.projeto img {
+  width: 100%;
 }
 
 .sobre {
+  background-image: url(img/eletrecista-fundo\ \(3\).png);
+
   margin-top: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 631px;
+  height: 620px;
+  width: 100%;
 }
 
 .txtSobre {
   margin-left: 250px;
   margin-bottom: 50px;
+
+  position: relative;
 }
 
 .txtSobre .sobrep {
   text-align: justify;
   width: 420px;
   color: white;
+  font-weight: 400;
+  font-size: 17px;
 
   margin-bottom: 50px;
 }
@@ -205,7 +251,7 @@ nav ul li a {
 .list-text p {
   text-align: justify;
   width: 420px;
-  color: white;
+  color:  white;
   font-size: 18px;
   margin-top: -12px;
 }
@@ -219,7 +265,11 @@ nav ul li a {
   color: var(--fundo);
   font-size: 18px;
 }
-/*Configurações Depoimentos*/
+
+/* END PROJECTS */
+
+/*START DEPOIMENTS*/
+
 .container2 {
   max-width: 1170px;
   margin: auto;
@@ -240,7 +290,6 @@ nav ul li a {
 
 .testimonials {
   padding: 100px 0;
-  background: tomato;
 }
 
 .testimonials-item {
@@ -249,9 +298,13 @@ nav ul li a {
   border-radius: 20px;
 }
 
+.swiper-slide {
+  box-shadow: 0px 10px 30px 0px rgba(92, 115, 160, 0.07);
+}
+
 .testimonials-item .info {
   display: flex;
-  align-items: center;
+  align-items: center;  
 }
 
 .testimonials-item img {
@@ -293,7 +346,7 @@ nav ul li a {
 .testimonials .swiper-pagination-bullet {
   height: 12px;
   width: 12px;
-  background: white;
+  background: var(--titulo);
 }
 
 .header-depoimento {
@@ -321,7 +374,11 @@ nav ul li a {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-/* Configurações Botão Social */
+
+/* END DEPOIMENTS */
+
+/* START SOCIAL BUTTONS */
+
 .box-btn-social button {
   position: relative;
   background-color: transparent;
@@ -342,7 +399,7 @@ nav ul li a {
 
 .btn-social a {
   text-decoration: none;
-  color: white;
+  color:  white;
   position: relative;
   z-index: 1;
   font-size: 18px;
@@ -361,7 +418,7 @@ nav ul li a {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #F99324; /* Cor do preenchimento */
+  background-color: #F99324; 
   transition: 1s ease;
   z-index: 0;
 }
@@ -379,31 +436,35 @@ button:active {
   margin-left: 10px;
 }
 
-
-
-.swiper2 {
-  width: 100%;
-  height: 919px;
+.btn-social2 i {
+  margin-left: 8px;
 }
 
-.swiper-slide {
-  text-align: center;
+.btn-social2 button {
+  background: rgba(255, 255, 255, 0.062); /* Transparência */
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  color: rgba(255, 255, 255, 0.253);
   font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 12px 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px); /* Desfoque */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.btn-social2 button:hover {
+  color: white;
+  box-shadow: 0px 0px 25px 6px rgba(255, 255, 255, 0.178);
 }
+/* END SOCIAL BUTTON */
 
-.swiper-slide {
-  background-image: url(img/hikivision\ \(3\).png)
+/* START RESPONSIVIDADE */
+
+@media screen and (max-width: 1600px) {
+  .sobre {
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -429,54 +490,21 @@ button:active {
   }
 }
 
-.card-img img{
-  border-radius: 100px;
-  border: 3px solid black;
-  height: 300px;
-  object-fit: cover;
-}
-
-.card-img {
-  text-align: center;
-}
-
-.box-cards-img {
-  display: flex;
-  margin-top: 50px;
-}
-
-.container-cards {
-  display: flex;
-  justify-content: center;
-}
-
-.left:hover {
-  transform: rotate(-5deg) translateY(-10px);
-  background-color: #F99324;
-  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
-}
-
-.right:hover {
-  transform: rotate(5deg) translateY(-10px);
-  background-color: #F99324;
-  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
-}
-/* .card:hover {
-  transform: rotate(5deg) translateY(-10px);
-  background-color: #F99324;
-  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
-} */
-
-
-
-.swiper-wrapper {
-  width: 100%;
-  height: max-content !important;
-  padding-bottom: 64px !important;
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-  position: relative;
+@media screen and (max-width: 1600px) {
+  .carousel-caption h5 {
+    position: relative;
+    right: 30px;
+    margin-right: 50px;
+    text-align: left;
+    font-size: 50px;
+    bottom: 25rem;
   }
-  .swiper-pagination-bullet {
-  background: #4f46e5;
+  
+  .carousel-caption p {
+    position: relative;
+    right: 30px;
+    text-align: left;
+    bottom: 25rem;
   }
+}
+/* END RESPONDIVIDADE */
