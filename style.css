@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --titulo:  #0A2743;
@@ -12,7 +12,7 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
   height: 100%;
 }
 
@@ -22,11 +22,10 @@ header {
   align-items: center;
   z-index: 999;
   position: fixed;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 1.2s ease, color 0.5s ease;
 
   padding: 20px;
   width: 100%;
-  /* margin-top: 18px; */
 }
 
 #header.scrolled {
@@ -52,7 +51,7 @@ nav ul li {
 nav a {
   padding: 10px;
   font-size: 22px;
-  font-weight: 200;
+  font-weight: 400;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.253);
   position: relative;
@@ -74,12 +73,7 @@ nav a:hover::after {
 }
 
 nav li a:hover {
-  transform: scale(1.2);
   color: white;
-}
-
-nav li:hover {
-  transform: scale(1.2);
 }
 /* START CAROUSEL */
 
@@ -99,7 +93,8 @@ nav li:hover {
   right: 30px;
   margin-right: 50px;
   text-align: left;
-  font-size: 50px;
+  font-size: 70px;
+  font-weight: 800;
   bottom: 25rem;
 }
 
@@ -108,6 +103,8 @@ nav li:hover {
   right: 30px;
   text-align: left;
   bottom: 25rem;
+
+  font-size: 20px;
 }
 /* END CAROUSEL  */
 
@@ -133,10 +130,15 @@ nav li:hover {
   color: var(--titulo);
 
   margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-.especialidades {
+#specialties {
   height: auto;
+}
+
+.txt-specialties {
+  margin: auto;
 }
 
 .cardsContainer1 {
@@ -152,9 +154,23 @@ nav li:hover {
 
 .card {
   margin: 40px;
-  width: 28rem; 
   height: 500px;
   transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container-cards .card {
+  border: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.4); 
+  font-size: 18px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
 }
 
 .card-body {
@@ -192,13 +208,13 @@ nav li:hover {
 }
 
 .left:hover {
-  transform: rotate(-5deg) translateY(-10px);
+  transform: rotate(-3deg) translateY(-10px);
   background-color: #F99324;
-  box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
+  box-shadow: 10px 30px 90px rgba(124, 1, 1, 0.3);
 }
 
 .right:hover {
-  transform: rotate(5deg) translateY(-10px);
+  transform: rotate(3deg) translateY(-10px);
   background-color: #F99324;
   box-shadow: 10px 10px 100px rgba(124, 1, 1, 0.3);
 }
@@ -206,7 +222,7 @@ nav li:hover {
 
 /* START PROJECTS*/
 
-.projeto img {
+.projects img {
   width: 100%;
 }
 
@@ -214,6 +230,7 @@ nav li:hover {
   background-image: url(img/eletrecista-fundo\ \(3\).png);
 
   margin-top: 20px;
+  background-size: cover;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -228,7 +245,7 @@ nav li:hover {
   position: relative;
 }
 
-.txtSobre .sobrep {
+.txtSobre .sobrep2 {
   text-align: justify;
   width: 420px;
   color: white;
@@ -241,6 +258,9 @@ nav li:hover {
 .txtSobre h1 {
   color: white;
   margin-bottom: 30px;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .list-text {
@@ -248,19 +268,20 @@ nav li:hover {
   flex-direction: column;
 }
 
-.list-text p {
+.list-text2 p {
   text-align: justify;
   width: 420px;
   color:  white;
   font-size: 18px;
   margin-top: -12px;
+  margin: 10px;
 }
 
-.list-text p:last-child {
+.list-text2 p:last-child {
   margin-bottom: 40px;
 }
 
-.list-text i {
+.list-text2 i {
   margin-right: 11px;
   color: var(--fundo);
   font-size: 18px;
@@ -274,6 +295,7 @@ nav li:hover {
   max-width: 1170px;
   margin: auto;
   padding: 0 15px;
+  margin-top: 70px;
 }
 
 .section-header {
@@ -288,8 +310,10 @@ nav li:hover {
   line-height: 1.2;
 }
 
-.testimonials {
+#testimonials {
   padding: 100px 0;
+  background: var(--titulo);
+  height: 800px;
 }
 
 .testimonials-item {
@@ -299,7 +323,7 @@ nav li:hover {
 }
 
 .swiper-slide {
-  box-shadow: 0px 10px 30px 0px rgba(92, 115, 160, 0.07);
+  box-shadow: 0px 10px 30px 0px rgba(4, 82, 240, 0.07);
 }
 
 .testimonials-item .info {
@@ -346,7 +370,7 @@ nav li:hover {
 .testimonials .swiper-pagination-bullet {
   height: 12px;
   width: 12px;
-  background: var(--titulo);
+  background: white;
 }
 
 .header-depoimento {
@@ -362,14 +386,19 @@ nav li:hover {
 
 .header-depoimento h1 {
   font-size: 2.2rem;
-  background:  var(--titulo);
-  color: white;
+  background:  white;
+  color: var(--titulo);
   padding: 10px 20px;
+  font-weight: 700;
+}
+
+.header-depoimento p {
+  color: white;
 }
 
 .header-depoimento span {
   font-size: 1.3rem;
-  color:  var(--titulo);
+  color:  white;
   margin-bottom: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -459,6 +488,15 @@ button:active {
 }
 /* END SOCIAL BUTTON */
 
+/* START CONTACT */
+
+  .box-txt-contato h2 {
+    color: var(--titulo);
+    margin-top: -20px;
+  }
+
+/* END CO
+
 /* START RESPONSIVIDADE */
 
 @media screen and (max-width: 1600px) {
@@ -474,6 +512,43 @@ button:active {
   }
   .cardsContainer2 {
     width: 100%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #carouselExampleCaptions {
+    width: 700px;
+  }
+
+  .txt-specialties {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+  }
+
+  .container-cards {
+    flex-direction: column;
+  }
+
+  .sobre {
+    width: 100%;
+  }
+
+  #testimonials {
+    width: 700px;
+  }
+  
+  .contato {
+    flex-direction: column;
+  }
+
+  footer {
+    width: 700px;
+  }
+
+  .container {
     flex-direction: column;
   }
 }
@@ -508,3 +583,80 @@ button:active {
   }
 }
 /* END RESPONDIVIDADE */
+
+  .contato {
+    /* background-image: url(img/12304.jpg); */
+    background-position: left;
+  }
+/* START FOOTER */
+footer {
+  padding: 40px;
+  background: var(--titulo);
+}
+
+footer .container {
+  display: flex;
+  color: white;
+} 
+
+footer .container ul {
+  width: 25%;
+}
+
+footer .container h3{
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+
+footer .container .redes-sociais i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+footer .container ul > li {
+  margin-bottom: 20px;
+}
+
+footer .container li{
+  margin: 10px 0;
+}
+
+footer .container a {
+  color: white;   
+}
+
+footer .container p {
+  margin-bottom: 40px;
+}
+
+.a {
+  margin-right: 50px;
+}
+
+.a p {
+width: 300px;
+text-align: justify;
+}
+
+/* END FOOTER */
+ 
+.success,
+.error {
+  text-align: center;
+}
+
+.success {
+  color: greenyellow;
+  font-size: 1.8em;
+}
+
+.error {
+  color: tomato;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
