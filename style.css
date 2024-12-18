@@ -537,7 +537,7 @@ button:active {
   }
 }
 
-@media screen and (min-width: 490px) {
+@media screen and (width <= 630px) {
     .container-cards .card {
     width: 18rem;
   }
@@ -551,14 +551,6 @@ button:active {
   .container-cards {
     flex-direction: column;   
     width: auto;
-  }
-
-  .card {
-    width: 20rem;
-  }
-
-  .carouselExampleCaptions {
-    width: 100%;
   }
 }
 
