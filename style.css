@@ -545,6 +545,10 @@ button:active {
   .txt-specialties h1{
     font-size: 38px;
   }
+
+  #specialties {
+    height: 2200px;
+  }
 }
 
 @media screen and (max-width: 740px) { 
