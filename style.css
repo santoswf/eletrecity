@@ -158,6 +158,10 @@ nav li a:hover {
   transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+.container-cards .configCard {
+  width: 35rem;
+}
+
 .container-cards .card {
   border: none;
 }
@@ -499,12 +503,6 @@ button:active {
 
 /* START RESPONSIVIDADE */
 
-@media screen and (max-width: 1600px) {
-  .sobre {
-    background-position: center;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .cardsContainer1 {
     width: 100%;
@@ -517,19 +515,9 @@ button:active {
 }
 
 @media screen and (max-width: 680px) {
-  #carouselExampleCaptions {
-    width: 700px;
-  }
 
-  .txt-specialties {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 700px;
-  }
-
-  .container-cards {
-    flex-direction: column;
+  #projects {
+    opacity: 0;
   }
 
   .sobre {
@@ -537,15 +525,11 @@ button:active {
   }
 
   #testimonials {
-    width: 700px;
-  }
-  
-  .contato {
-    flex-direction: column;
+    width: auto;
   }
 
-  footer {
-    width: 700px;
+  .contato {
+    flex-direction: column;
   }
 
   .container {
@@ -553,9 +537,24 @@ button:active {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (min-width: 490px) {
+    .container-cards .card {
+    width: 28rem;
+  }
+}
+
+@media screen and (max-width: 740px) { 
+  .container-cards {
+    flex-direction: column;   
+    width: 100%; 
+  }
+
   .card {
-    width: auto;
+    width: 20rem;
+  }
+
+  .carouselExampleCaptions {
+    width: 100%;
   }
 }
 
